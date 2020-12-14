@@ -1,6 +1,9 @@
-# Parallax Effect Demo in Flutter
+# Flutter Motion Background
 
-A new Flutter application.
+A simple demo for Flutter interactive motion background
+
+## HomeScreen will respond visually as per your device's tilt/position.
+
 
 ## Getting Started
 
