@@ -37,7 +37,8 @@ class _PerspectiveZoomDemoState extends State<PerspectiveZoomDemo> {
   int bgMotionSensitivity = 2;
   @override
   void initState() {
-    _streamSubscription = accelerometerEvents.listen((AccelerometerEvent event) {
+    _streamSubscription =
+        accelerometerEvents.listen((AccelerometerEvent event) {
       setState(() {
         acceleration = event;
       });
@@ -66,7 +67,7 @@ class _PerspectiveZoomDemoState extends State<PerspectiveZoomDemo> {
               left: acceleration.x * bgMotionSensitivity,
               child: Align(
                 child: Image.asset(
-                  "assets/images/bg.jpg",
+                  "assets/images/bg.png",
                   height: 1920,
                   fit: BoxFit.fitHeight,
                 ),
@@ -80,8 +81,22 @@ class _PerspectiveZoomDemoState extends State<PerspectiveZoomDemo> {
               left: acceleration.x * planetMotionSensitivity,
               child: Align(
                 child: Image.asset(
-                  "assets/images/earth_2.png",
-                  width: 250,
+                  "assets/images/joker.png",
+                  height: 1480,
+                ),
+              ),
+            ),
+            AnimatedPositioned(
+              duration: Duration(milliseconds: 250),
+              top: acceleration.z * planetMotionSensitivity,
+              bottom: acceleration.z * -planetMotionSensitivity,
+              right: acceleration.x * -planetMotionSensitivity,
+              left: acceleration.x * planetMotionSensitivity,
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Image.asset(
+                  "assets/images/cards.png",
+                  width: 400,
                 ),
               ),
             ),
