@@ -4,6 +4,12 @@ A simple demo for Flutter interactive motion background
 
 ## HomeScreen will respond visually as per your device's tilt/position.
 
+# Preview
+
+
+<p align="center"><img alt="preview" src="https://github.com/ArunBalajiR/flutter-motion-background/blob/master/assets/images/preview.gif?raw=true" width="50%" style="margin: 0px 0px 0px 0px;">
+       </p>
+
 
 ## Getting Started
 
